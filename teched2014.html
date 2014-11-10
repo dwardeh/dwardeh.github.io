@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>BD Conference 2014</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap_yeti.css.min" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/site.css" rel="stylesheet">
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><i class="fa fa-hand-o-right fa-lg"></i> <em>Danny Wardeh</em></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <!-- Begin page content -->
+    <div class="container">
+      <div class="page-header">
+        <h1><small>May 16, 2014</small> Optimizing Your ASP.Net Website</h1>
+    </div>
+	<p>
+	As web developers we have plenty of worries from ensuring our apps work on IE7 to Chrome 34 million,  
+	looking good on mobile and tablet devices, and most importantly, meeting our ever changing 
+	customer requirements. One item that can be overlooked is optimizing your website to reduce 
+	its weight in order to increase the download speed.
+	</p>
+	<p>
+	If gone unchecked, it would be easy to develop a site that requires the client browser to download 
+	500kb or more per page and 30+ HTTP requests. This isn’t terribly high, but for mobile users it is 
+	just enough of a delay for them to give up on browsing to your site. Not only that, you’re server 
+	is kept busy doing unnecessary work. 
+	</p>
+	
+	<p>
+	I’m going to show you a few simple tips that will dramatically decrease the weight of your website. 
+	Page weight consists of the size of what is to be downloaded by the browser and the number of HTTP 
+	requests that it takes to download the website. The lighter the website, the quicker it will be to 
+	download for your users.
+	</p>
+	
+	<ol>
+	<li><strong>Activate Gzip compression.</strong> By activating Gzip, IIS will send the zipped files to the client browser thus saving you quite a bit on the size of the download.</li>
+	<li><strong>Bundle.</strong> By bundling, you reduce the number of css files downloaded into a single file so if you had 5 css files for your site, you’d now have only 1 thus saving you 4 extra http requests. This should be done for both css and javascript files.</li>
+	<li><strong>Minify.</strong> Now that you’ve bundled your css and javascript files into neat packages, it’s time to shrink the size of the files. Minification is simply the process of removing comments and white space. It also does some other things like rename functions to a meaningless letter but what it really does is makes the file much smaller in size which is what we want.</li>
+	<li><strong>Optimize images.</strong> Don’t just trust your graphic artist, take the time to optimize every image yourself. It’s very easy using Web Essentials.</li>
+	<li><strong>Base 64 encode small images.</strong> If you use a lot of smaller images <= 5k in size, you should encode them into your css file. This will reduce the number of http requests.</li>
+	<li><strong>Cache me if you can.</strong> Consider caching your javascript and css files by setting them to not expire for a long period of time. By doing this, the next time someone goes to your website, she will not need to download those files. The only caveat is when you make a change to your javascript or css and would like the user to get the latest file. To get around this, you can write code to change the path of your file every time it changes and use URL rewrite to handle the file path.</li>
+	<li><strong>Favicon.ico.</strong> A lot of times this icon file is way bigger than it needs to be. Simply reduce the size of this file by opening it in visual studio and removing all the icon sizes except 16X16.</li>
+	</ol>
+
+<p class="lead">
+So how do I do all of this? 
+</p>
+<p>
+Good question. You need tools. To be more specific, you need:
+<ul>
+<li><strong>Web Essentials.</strong> This is an extension for visual studio that is a must have for any developer. With Web Essentials, you can bundle, minify, optimize images, base 64 encode images and a bunch of other stuff.</li>
+<li><strong>Yslow.</strong> This is a firefox add on that gives you a grade and tells you exactly step by step what can be done in order to optimize your site.</li>
+</ul>
+</p>	
+
+<img src="images/image001.jpg" />
+<img src="images/image002.jpg" />
+
+<p class="lead">
+One more thing, checkout this <a href="http://webdevchecklist.com/">Check list</a> to get you going.
+</p>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <p class="text-muted">
+		<a href='https://www.facebook.com/danny.wardeh' target='_blank'><i class="fa fa-facebook-square fa-2x"></i></a>
+		<a href='www.linkedin.com/pub/danny-wardeh/7/10a/53a/' target='_blank'><i class="fa fa-linkedin-square fa-2x"></i></a>
+		<a href='https://github.com/dwardeh' target='_blank'><i class="fa fa-github-square fa-2x"></i></a>
+		</p>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	-->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
