@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>BD Conference 2014</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap_yeti.css.min" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/site.css" rel="stylesheet">
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><i class="fa fa-hand-o-right fa-lg"></i> <em>Danny Wardeh</em></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <!-- Begin page content -->
+    <div class="container">
+      <div class="page-header">
+        <h1><small>November 9, 2014</small> Breaking Development Conference</h1>
+      </div>
+	  <p class="lead">
+		The Free Food, snacks, and vendor prizes were absolutely amazing... at some other conference that wasn't this one. As a matter of fact, I 
+		even had to pay for my own parking at $20 a day. Actually, they did have a hot breakfast and coffee so it wasn't that bad. Plus,
+		I did get to hear more f-bombs in 2 days than I did my junior year of high school. The <a href="https://bdconf.com/speakers/" target="_blank">speakers</a>
+		where terrific and I came away with some inspiration so all was not lost.
+	  </p>
+	  <p>
+	   I took the top few themes from the speakers and foolishly tried to summarize them in my own way as if I discovered them myself below.
+	  </p>
+	  <h4>Progressive Enhancement</h4>
+	  <p>
+	  
+With a little planning you can make your websites work on all browsers, old and new. To make this happen, 
+you’ll use progressive enhancement. The key 
+to progressive enhancement is fault tolerance. Both HTML and CSS are fault tolerant, for example when adding an 
+html tag that the browser doesn’t understand, the page is still rendered gracefully. Or when you add a style sheet 
+attribute that isn’t available for the browser, it simply doesn’t get applied and it doesn’t break in the middle 
+so styles before and after continue to work. This is a good thing because we can take advantage of both old and 
+new features in one document. With progressive enhancement, basic html is written first making it more likely to 
+work across all browsers. Then after a good shallacking, add in your really cool html and css enhancements that 
+only work on modern browsers. 
+</p>
+<p>
+Here’s an example of a datalist that uses predictive input for newer browsers. For browsers that don't support datalist
+ a combobox and an input for other will be displayed.
+<pre>
+&ltlabel for="source"&gtHow did you hear about us?&lt/label&gt
+&ltdatalist id="sources"&gt
+    &ltselect name="source"&gt
+        &ltoption&gtplease choose...&lt/option&gt
+        &ltoption value="television"&gtTelevision&lt/option&gt
+        &ltoption value="radio"&gtRadio&lt/option&gt
+        &ltoption value="newspaper"&gtNewspaper&lt/option&gt
+        &ltoption&gtOther&lt/option&gt
+    &lt/select&gt
+    If other, please specify:
+&lt/datalist&gt
+&ltinput id="source" name="source" list="sources"&gt
+</pre>
+This example came from Jeremy Keith’s website <a href='https://adactio.com/journal/4272/' target="_blank">here</a>.
+
+</p>
+<p>
+I know what your thinking, that’s all find and dandy but what about my javascript? Javascript, as you surely know, is not fault tolerant. 
+If you try to use a feature of javascript that the browser doesn’t understand, your page will break and your users will be mad at you personally 
+while your co-workers mock you. 
+This is why we <a href='http://responsivenews.co.uk/post/18948466399/cutting-the-mustard' target="_blank">“cut the mustard”</a>. Use javascript 
+to see if a function is supported and run it if you can. Always have a HTML version that works 
+without the javascript and let the javascript enhance the experience if it’s available.
+To “cut the mustard”, if “querySelector” and “addEventListener” are in the document then you can run javascript.
+</p>
+<pre>
+if ( 'querySelector' in document && 'addEventListener' in window ) {
+// Scripts go here
+}
+</pre>
+<a href='http://responsivenews.co.uk/post/18948466399/cutting-the-mustard' target="_blank">This</a> explains the method and why they chose those two fields.
+<p>
+By starting simple and cutting the mustard, you can build a robust website that is both past and future friendly.
+</p>
+<h4>Design for people, not just screens</h4>
+<p>
+I remember developing websites at 800 X 600 resolution and explaining to the client that this is the standard size for web pages. 
+I also remember when the “standard size” moved to 1024 X 768. Although this may have worked in the past, it is not the way it is 
+today. Two years ago, I wrote a media query targeting the iphone’s resolution. Today, there are 4 different screen sizes just for 
+iphones. Then there’s all the different screen sizes for Samsung, Nokia, HTC, Blackberry and Windows phones (both of them) too. And don’t forget 
+about tablets, mini tablets, chrome books, and tv’s. The line between devices have blurred out of existence therefore responsive 
+web design is now a responsibility, not a feature. Having a separate domain for a mobile website or a mobile version is just a waste 
+of time. Instead, make one responsive website work everywhere. Oh, and it's perfectly okay if your site doesn't look the same in every browser because that's what
+they said and I believe them. 
+</p>
+<h4>Various interesting links</h4>
+<ul>
+	<li><a href="https://libsassnet.codeplex.com/" target="_blank">https://libsassnet.codeplex.com/</a></li>
+	<li><a href="http://susy.oddbird.net/demos/" target="_blank">http://susy.oddbird.net/demos/</a></li>
+	<li><a href="http://www.chromevox.com/" target="_blank">http://www.chromevox.com/</a></li>
+	<li><a href="https://carousel.dropbox.com/" target="_blank">https://carousel.dropbox.com/</a> - cool use of scrolling</li>
+	<li><a href="http://capptivate.co/" target="_blank">http://capptivate.co/</a> - transitions</li>
+	<li><a href="http://www.invisionapp.com/" target="_blank">http://www.invisionapp.com/</a> - prototyping</li>
+	<li><a href="http://patternlab.io/" target="_blank">http://patternlab.io/</a></li>
+	<li><a href="https://github.com/blog/831-issues-2-0-the-next-generation" target="_blank">https://github.com/blog/831-issues-2-0-the-next-generation</a> - who knew</li>
+	<li><a href="http://www.chrome.com/racer" target="_blank">http://www.chrome.com/racer</a></li>
+	<li><a href="http://stylifyme.com/" target="_blank">http://stylifyme.com/</a></li>
+	<li><a href="http://www.Lingscars.com" target="_blank">http://www.Lingscars.com</a> - we should all aim to have a site this good!</li>
+</ul>
+	  
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <p class="text-muted">
+		<a href='https://www.facebook.com/danny.wardeh' target='_blank'><i class="fa fa-facebook-square fa-2x"></i></a>
+		<a href='www.linkedin.com/pub/danny-wardeh/7/10a/53a/' target='_blank'><i class="fa fa-linkedin-square fa-2x"></i></a>
+		<a href='https://github.com/dwardeh' target='_blank'><i class="fa fa-github-square fa-2x"></i></a>
+		</p>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	-->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
