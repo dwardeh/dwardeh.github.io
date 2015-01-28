@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Service Desk</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+  <div data-role="page" data-control-title="List" id="page1">
+      <div data-theme="a" data-role="header">
+          <h4>
+              Service Desk
+          </h4>
+		  <span class="ui-btn-right">
+		  dwa849
+		  </span>
+      </div>
+	  <div data-role="navbar">
+		<ul>
+			<li><a href="#" class="ui-btn-active">Unassigned</a></li>
+			<li><a href="#" class="ui-btn">Team</a></li>
+			<li><a href="#" class="ui-btn">Me</a></li>
+		</ul>
+	  </div>
+	
+      <div data-role="content">
+		<h3>CCB</h3>        
+		<ul data-role="listview" data-divider-theme="g" data-inset="false">
+              <li data-theme="c">
+                  <a href="#page2" data-transition="slide">
+                      #12345 - John Doe (P3)
+                  </a>
+              </li>
+              <li data-theme="a">
+                  <a href="#page1" data-transition="slide">
+                     #12346 - Joe Schmoe(P3)
+                  </a>
+              </li>
+          </ul>
+      	<h4>Open</h4>
+		 <ul data-role="listview" data-divider-theme="g" data-inset="false">
+              <li data-theme="c">
+                  <a href="#page2" data-transition="slide">
+                     #12347 - Beatrice Banana (P3)
+                  </a>
+              </li>
+              <li data-theme="a">
+                  <a href="#page1" data-transition="slide">
+                     #12348 - Rod Jones(P4) 
+                  </a>
+              </li>
+		</ul>
+	  </div>
+	  
+	    
+
+  </div>
+  <div data-role="page" data-control-title="Detail" id="page2">
+      <div data-theme="a" data-role="header" data-add-back-btn="true">
+         <h4>
+              Service Desk
+          </h4>
+		  <span class="ui-btn-right">
+		  dwa849
+		  </span>
+      </div>
+      <div data-role="content">
+		<div class="ui-grid-a">
+			<div class="ui-block-a"><strong>Ticket </strong>#123456</div>
+			<div class="ui-block-b"><strong>Priority</strong> 3</div>
+		</div>
+		<strong>Requestor:</strong> John Doe <br />
+		<strong>Temp Phone:</strong> 1-888-887-8787 <br />
+		<strong>Description:</strong> <br />
+		Lorem ipsum dolor sit amet, vitae placerat maiestatis ea quo, 
+		ut eos probo fuisset. An simul decore dolores nam, eleifend 
+		interpretaris no quo. Ludus nonumes mentitum et pri, ut lorem viderer usu, 
+		id vivendo copiosae usu. Ea usu inermis volumus. Eruditi recusabo vel ea, 
+		id pro salutatus comprehensam, ea perfecto accommodare usu.
+      </div>
+	  <div data-theme="a" data-role="footer" data-position="fixed">
+			  <div data-role="navbar">
+				<ul>
+					<li><a href="#page1" data-transition="slide" data-direction="reverse" data-icon="grid" class="ui-btn">List</a></li>
+					<li><a href="#page1" data-transition="flow" data-icon="check" class="ui-btn">Open</a></li>
+					<li><a href="#page3" data-transition="flip" data-icon="edit" class="ui-btn">Update Status</a></li>
+				</ul>
+			  </div>
+			
+		</div>
+  </div>
+  <div data-role="page" data-control-title="Edit" id="page3">
+      <div data-theme="a" data-role="header" data-add-back-btn="true">
+         <h4>
+              Service Desk
+          </h4>
+		  <span class="ui-btn-right">
+		  dwa849
+		  </span>
+      </div>
+      <div data-role="content">
+        <div class="ui-grid-a">
+			<div class="ui-block-a"><strong>Ticket </strong>#123456</div>
+			<div class="ui-block-b"><strong>Priority</strong> 3</div>
+		</div>
+		  
+		  <form action="">
+		  <br />
+			<label for="status" class="select">Status</label> 
+			<select name="status" id="status" class="form-control">
+			  <option value="">Open</option>
+			  <option value="">CCB</option>
+			  <option value="">Close</option>
+			</select>
+			<br/>
+			<label for="assignee" class="select">Assignee</label> 
+			<select id="assignee" name="assignee" class="form-control">
+			  <option value="">Unassigned</option>
+			  <option value="">Daniel Martin</option>
+			  <option value="0x0FD1CE9110BBDC40B8E8F2517A47A5DE">Danny Wardeh</option>
+			  <option value="">Joey Green</option>
+			</select>
+			
+			<label for="comment">Comment</label>
+			<textarea name="comment" id="comment" cols="40" rows="8" class="form-control" ></textarea>
+          </form>
+      </div>
+	  
+	  <div data-theme="a" data-role="footer" data-position="fixed">
+			  <div data-role="navbar">
+				<ul>
+					<li><a href="#page1" data-transition="slide" data-direction="reverse" data-icon="forbidden" class="ui-btn">Cancel</a></li>
+					<li><a href="#page4" data-transition="pop" data-icon="check" class="ui-btn">Save</a></li>
+				</ul>
+			  </div>
+			
+		</div>
+  </div>
+  <div data-role="page" data-control-title="Confirm" id="page4" data-dialog="true">
+	<div data-role="header" data-theme="b">
+		<h1>Save Changes</h1>
+	</div>
+
+	<div role="main" class="ui-content">
+	<h2>Are you sure you want to save?</h2>
+	<p></p>
+		<a href="#page1" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Save</a>
+		<a href="#page3" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Cancel</a>
+	</div>
+  </div>
+</body>
+</html>
